@@ -1,4 +1,5 @@
-# AppChart
+# grid-chart
+![Grid Chart](https://upload-images.jianshu.io/upload_images/11555850-327907086647da9e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 

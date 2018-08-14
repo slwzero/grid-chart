@@ -1,0 +1,53 @@
+.chart {
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  right: -40px;
+  top: 70px;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  .clearfix:after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    line-height: 0;
+    font-size: 0;
+    height: 0;
+    clear: none;
+  }
+  .bar {
+    width: 5px;
+    height: 40px;
+    float: left;
+    margin-right: 5px;
+  }
+  .item {
+    display: inline-block;
+  }
+  .item-text {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    white-space: nowrap; // 禁止字体换行
+    font-size: 18px;
+  }
+  .item-cent {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .item-showCent {
+    font-weight: 300;
+  }
+  .stick {
+    width: 5px;
+    height: 60px;
+    position: absolute;
+    top: -59px;
+  }
+  .odd .stick {
+    top: 40px;
+  }
+}

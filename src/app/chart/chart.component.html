@@ -1,13 +1,21 @@
 <div class="chart clearfix">
-  <div class="item" [ngClass]="{'odd': index %2 !==0}" *ngFor="let item of newMockData.propertion; index as index">
-    <div class="stick" [ngStyle]="{'background-color':item.color}">
-      <div class="item-text" [ngStyle]="{'color':item.color}">{{item.name}} </div>
-      <div class="item-cent" [ngStyle]="{'color':item.color}">{{item.cent }}%
-        <span class="item-showCent">({{item.num }}/{{item.total}})</span>
+  <!-- 当数据不为空 -->
+  <div class="not-empty" *ngIf="!isEmpty">
+    <!-- 奇数时添加class="odd" stick在下面 -->
+    <div class="item" [ngClass]="{'odd': index %2 !==0}" *ngFor="let item of newMockData; index as index">
+      <div class="stick" [ngStyle]="{'background-color':item.color}">
+        <div class="item-text" [ngStyle]="{'color':item.color}">{{item.name}} </div>
+        <div class="item-cent" [ngStyle]="{'color':item.color}">{{item.cent }}%
+          <span class="item-showCent">({{item.num }}/{{item.total}})</span>
+        </div>
+      </div>
+      <div class="bars clearfix">
+        <div class="bar" *ngFor="let i of item.bars" [ngStyle]="{'background-color':item.color}"></div>
       </div>
     </div>
-    <div class="bars clearfix">
-      <div class="bar" *ngFor="let i of item.bars" [ngStyle]="{'background-color':item.color}"></div>
+  </div>
+  <div class="empty" *ngIf="isEmpty">
+    <div class="empty-bars bar" *ngFor="let i of emptyArray" [class.empty-bg]="isEmpty">
     </div>
   </div>
 </div>
